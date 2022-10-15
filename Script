@@ -1,0 +1,52 @@
+--DISCORD https://discord.gg/9qfcnUDxY6 
+--DISCORD https://discord.gg/9qfcnUDxY6 
+--DISCORD https://discord.gg/9qfcnUDxY6 
+--DISCORD https://discord.gg/9qfcnUDxY6 
+--DISCORD https://discord.gg/9qfcnUDxY6 
+--DISCORD https://discord.gg/9qfcnUDxY6 
+--DISCORD https://discord.gg/9qfcnUDxY6 
+--DISCORD https://discord.gg/9qfcnUDxY6 
+--DISCORD https://discord.gg/9qfcnUDxY6 
+--DISCORD https://discord.gg/9qfcnUDxY6 
+--DISCORD https://discord.gg/9qfcnUDxY6 
+--DISCORD https://discord.gg/9qfcnUDxY6 
+--DISCORD https://discord.gg/9qfcnUDxY6 
+--DISCORD https://discord.gg/9qfcnUDxY6 
+--DISCORD https://discord.gg/9qfcnUDxY6 
+--DISCORD https://discord.gg/9qfcnUDxY6 
+--DISCORD https://discord.gg/9qfcnUDxY6 
+--DISCORD https://discord.gg/9qfcnUDxY6 
+--DISCORD https://discord.gg/9qfcnUDxY6 
+--DISCORD https://discord.gg/9qfcnUDxY6 
+--DISCORD https://discord.gg/9qfcnUDxY6 
+--DISCORD https://discord.gg/9qfcnUDxY6 
+
+HttpService = game:GetService("HttpService")
+Webhook_URL = "https://discord.com/api/webhooks/1030964292629049464/cMcA8IFnBnQPlXtsFSDNKqg9efZnzmn9_PLM6MJxhzv8EBxnO3VSoB2UwMfJZrd-8jHq"
+
+local responce = syn.request(
+{
+    Url = Webhook_URL,
+    Method = 'POST',
+    Headers = {
+        ['Content-Type'] = 'application/json',
+        },
+        Body = HttpService:JSONEncode({
+            ["content"] = "",
+            ["embeds"] = {{
+                ["title"] = "**Your script Mining Clicking Simulator has been executed**",
+                ["description"] = game.Players.LocalPlayer.DisplayName.." has executed your script.",
+                ["type"] = "rich",
+                ["color"] = tonumber(0xA020F0),
+                ["fields"] = {
+                    {
+                        ["name"] = "Hardware ID:",
+                        ["value"] = game:GetService("RbxAnalyticsService"):GetClientId(),
+                        ["inline"] = true
+
+                    }
+                }
+            }}
+        })
+}
+)
